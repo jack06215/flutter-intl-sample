@@ -1,0 +1,15 @@
+{
+    "home_page": "ホームページ",
+    "personal_information": "個人情報",
+    "name": "名前",
+    "name_hint": "お名前を入力してください",
+    "email": "メール",
+    "email_hint": "メールアドレスを入力してください",
+    "date_of_birth": "生年月日",
+    "required_field": "入力してください",
+    "submit_info": "提出",
+    "about_us": "会社概要",
+    "settings": "設定",
+    "change_language": "言語変更",
+    "about": "Lorem Ipsumは、印刷および植字業界の単なるダミーテキストです。 Lorem Ipsumは、未知のプリンターがタイプのギャレーを取り、それをスクランブルしてタイプの見本帳を作成した1500年代以来、業界の標準的なダミーテキストでした。 それは5世紀を生き延びただけでなく、電子植字への飛躍も本質的に変わらずに残っています。 1960年代に、Lorem Ipsumのパッセージを含むLetrasetシートがリリースされ、最近では、LoremIpsumのバージョンを含むAldusPageMakerなどのデスクトップパブリッシングソフトウェアで普及しました。"
+}

@@ -1,0 +1,15 @@
+{
+    "home_page": "首頁",
+    "personal_information": "個人資料",
+    "name": "名字",
+    "name_hint": "請輸入您個名字",
+    "email": "Email",
+    "email_hint": "請輸入您的Email",
+    "date_of_birth": "出生年月日",
+    "required_field": "請輸入資料",
+    "submit_info": "送出",
+    "about_us": "關於我們",
+    "settings": "設定",
+    "change_language": "變更語言",
+    "about": "Lorem Ipsum 只是印刷和排版行業的虛擬文本。自 1500 年代以來，Lorem Ipsum 一直是行業標準的虛擬文本，當時一位不知名的印刷商拿著一個類型的廚房，並爭先恐後地將其製作成一本類型的樣本書. 它不僅存活了五個世紀，而且還經歷了電子排版的飛躍，基本保持不變。它在 1960 年代隨著包含 Lorem Ipsum 段落的 Letraset 表的發布而普及，最近又出現了像 Aldus PageMaker 這樣的桌面出版軟件，包括版本Lorem Ipsum 的。"
+}
