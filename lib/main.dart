@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hello_world/localization/demo_localization.dart';
 import 'package:flutter_hello_world/router/custom_router.dart';
 import 'package:flutter_hello_world/router/route_constants.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'localization/language_constants.dart';
 
@@ -52,21 +52,8 @@ class _MyAppState extends State<MyApp> {
         title: "Flutter Localization Demo",
         theme: ThemeData(primarySwatch: Colors.blue),
         locale: _locale,
-        supportedLocales: [
-          Locale("en", "US"),
-          Locale("fa", "IR"),
-          Locale("ar", "SA"),
-          Locale("hi", "IN"),
-          Locale("ja", "JA"),
-          Locale.fromSubtags(
-              languageCode: 'zh', scriptCode: 'Hant', countryCode: 'TW'),
-        ],
-        localizationsDelegates: [
-          DemoLocalization.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
+        supportedLocales: AppLocalizations.supportedLocales,
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
         localeResolutionCallback: (locale, supportedLocales) {
           for (var supportedLocale in supportedLocales) {
             if (supportedLocale.languageCode == locale.languageCode &&

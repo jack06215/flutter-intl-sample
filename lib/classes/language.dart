@@ -10,9 +10,9 @@ class Language {
     return <Language>[
       Language(1, "🇦🇫", "فارسی", "fa"),
       Language(2, "🇺🇸", "English", "en"),
-      Language(4, "🇮🇳", "हिंदी", "hi"),
       Language(5, "🇯🇵", "日本語", "ja"),
-      Language(5, "🇹🇼", "繁體中文(台灣)", "zh-TW"),
+      Language(5, "🇹🇼", "繁體中文", "zh-TW"),
+      Language(6, "🇨🇳", "簡體中文", "zh-CN"),
     ];
   }
 }

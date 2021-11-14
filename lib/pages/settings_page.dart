@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hello_world/classes/language.dart';
 import 'package:flutter_hello_world/localization/language_constants.dart';
 import 'package:flutter_hello_world/main.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class SettingsPage extends StatefulWidget {
   SettingsPage({Key key}) : super(key: key);
@@ -20,13 +22,13 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(getTranslated(context, 'settings')),
+        title: Text(AppLocalizations.of(context).settings),
       ),
       body: Container(
         child: Center(
             child: DropdownButton<Language>(
           iconSize: 30,
-          hint: Text(getTranslated(context, 'change_language')),
+          hint: Text(AppLocalizations.of(context).change_language),
           onChanged: (Language language) {
             _changeLanguage(language);
           },

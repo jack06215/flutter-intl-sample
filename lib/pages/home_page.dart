@@ -3,6 +3,7 @@ import 'package:flutter_hello_world/classes/language.dart';
 import 'package:flutter_hello_world/localization/language_constants.dart';
 import 'package:flutter_hello_world/main.dart';
 import 'package:flutter_hello_world/router/route_constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -26,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(getTranslated(context, 'home_page')),
+        title: Text(AppLocalizations.of(context).home_page),
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -80,8 +81,7 @@ class _HomePageState extends State<HomePage> {
               height: MediaQuery.of(context).size.height / 4,
               child: Center(
                 child: Text(
-                  getTranslated(context, 'personal_information'),
-                  // DemoLocalization.of(context).translate('personal_information'),
+                  AppLocalizations.of(context).personal_information,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 30,
@@ -93,15 +93,14 @@ class _HomePageState extends State<HomePage> {
             TextFormField(
               validator: (val) {
                 if (val.isEmpty) {
-                  return getTranslated(context, 'required_field');
-                  // return DemoLocalization.of(context).translate('required_fiedl');
+                  return AppLocalizations.of(context).required_field;
                 }
                 return null;
               },
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: getTranslated(context, 'name'),
-                hintText: getTranslated(context, 'name_hint'),
+                labelText: AppLocalizations.of(context).name,
+                hintText: AppLocalizations.of(context).name_hint,
               ),
             ),
             SizedBox(
@@ -110,14 +109,14 @@ class _HomePageState extends State<HomePage> {
             TextFormField(
               validator: (val) {
                 if (val.isEmpty) {
-                  return getTranslated(context, 'required_field');
+                  return AppLocalizations.of(context).required_field;
                 }
                 return null;
               },
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: getTranslated(context, 'email'),
-                hintText: getTranslated(context, 'email_hint'),
+                labelText: AppLocalizations.of(context).email,
+                hintText: AppLocalizations.of(context).email_hint,
               ),
             ),
             SizedBox(
@@ -126,7 +125,7 @@ class _HomePageState extends State<HomePage> {
             TextFormField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: getTranslated(context, 'date_of_birth')),
+                  hintText: AppLocalizations.of(context).date_of_birth),
               onTap: () async {
                 FocusScope.of(context).requestFocus(FocusNode());
                 await showDatePicker(
@@ -151,7 +150,7 @@ class _HomePageState extends State<HomePage> {
               color: Theme.of(context).primaryColor,
               child: Center(
                 child: Text(
-                  getTranslated(context, 'submit_info'),
+                  AppLocalizations.of(context).submit_info,
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ),
@@ -185,7 +184,7 @@ class _HomePageState extends State<HomePage> {
               size: 30,
             ),
             title: Text(
-              getTranslated(context, 'about_us'),
+              AppLocalizations.of(context).about_us,
               style: _textStyle,
             ),
             onTap: () {
@@ -202,7 +201,7 @@ class _HomePageState extends State<HomePage> {
               size: 30,
             ),
             title: Text(
-              getTranslated(context, 'settings'),
+              AppLocalizations.of(context).settings,
               style: _textStyle,
             ),
             onTap: () {
