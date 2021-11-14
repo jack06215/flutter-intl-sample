@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  intl: ^0.17.0
   flutter_localizations:
     sdk: flutter
   shared_preferences: ^0.5.6+2
@@ -46,13 +47,7 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
-  assets:
-    - lib/lang/en.json
-    - lib/lang/fa.json
-    - lib/lang/hi.json
-    - lib/lang/ja.json
-    - lib/lang/zh-TW.json
+  generate: true
 
   # To add assets to your application, add an assets section, like this:
   # assets:

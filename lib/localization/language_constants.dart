@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hello_world/localization/demo_localization.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 const String LAGUAGE_CODE = 'languageCode';
@@ -7,9 +6,9 @@ const String LAGUAGE_CODE = 'languageCode';
 // Languages code
 const String ENGLISH = 'en';
 const String FARSI = 'fa';
-const String HINDI = 'hi';
 const String JAPANESE = 'ja';
 const String ZH_TAIWAN = 'zh-TW';
+const String ZH_CHINA = 'zh-CN';
 
 Future<Locale> setLocale(String languageCode) async {
   SharedPreferences _prefs = await SharedPreferences.getInstance();
@@ -30,17 +29,14 @@ Locale _locale(String languageCode) {
     case FARSI:
       return Locale(FARSI, "IR");
     case JAPANESE:
-      return Locale(JAPANESE, "JA");
-    case HINDI:
-      return Locale(HINDI, "IN");
+      return Locale(JAPANESE);
+    case ZH_CHINA:
+      return Locale.fromSubtags(
+          languageCode: 'zh', scriptCode: 'Hans', countryCode: 'CN');
     case ZH_TAIWAN:
       return Locale.fromSubtags(
           languageCode: 'zh', scriptCode: 'Hant', countryCode: 'TW');
     default:
-      return Locale(ENGLISH, 'US');
+      return Locale(ENGLISH);
   }
-}
-
-String getTranslated(BuildContext context, String key) {
-  return DemoLocalization.of(context).translate(key);
 }

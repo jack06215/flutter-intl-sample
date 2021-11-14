@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hello_world/localization/language_constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class AboutPage extends StatefulWidget {
   AboutPage({Key key}) : super(key: key);
@@ -13,12 +14,12 @@ class _AboutPageState extends State<AboutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(getTranslated(context, 'about_us')),
+        title: Text(AppLocalizations.of(context).about_us),
       ),
       body: Container(
         padding: EdgeInsets.all(20),
         child: Center(
-          child: Text(getTranslated(context, 'about')),
+          child: Text(AppLocalizations.of(context).about),
         ),
       ),
     );
